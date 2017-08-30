@@ -1,0 +1,16 @@
+menuconfig MHW
+	tristate "mhw"
+	--help
+	  ask mhw
+if MHW
+config MHW5
+	tristate "mhw5"
+	default n
+	help
+	    ask mhw
+config MHW7
+	tristate "mhw7"
+	default n
+	help
+	    ask mhw
+endif

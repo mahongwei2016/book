@@ -1,0 +1,2 @@
+echo "obj-$(CONFIG_MHW)               +=mhw/" >> ../Makefile
+echo "source \"drivers/char/mhw/Kconfig\"" >> ../Kconfig
