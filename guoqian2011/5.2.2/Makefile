@@ -1,4 +1,4 @@
-obj-m := kobject.o
+obj-m := kobject.o kset.o
 KDIR := ${kernel}
 all:
 	echo $(shell pwd)
