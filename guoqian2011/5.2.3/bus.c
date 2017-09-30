@@ -3,8 +3,7 @@
 #include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/string.h>
-MODULE_AUTHOR("MHW");
-MODULE_LICENSE("GPL");
+
 
 static int my_match(struct device *dev,struct device_driver *driver)
 {
@@ -25,8 +24,8 @@ struct bus_type my_bus_type={
 	.name="my_bus",
 	.match=my_match,
 };
-EXPORT_SYSBOL(my_bus);
-EXPORT_SYSBOL(my_bus_type);
+EXPORT_SYMBOL(my_bus);
+EXPORT_SYMBOL(my_bus_type);
 
 static char* version="$revision:1.9 $";
 static ssize_t show_bus_version(struct bus_type *bus,char *buf)
@@ -54,3 +53,5 @@ static void my_bus_exit(void)
 }
 module_init(my_bus_init);
 module_exit(my_bus_exit);
+MODULE_AUTHOR("MHW");
+MODULE_LICENSE("GPL");

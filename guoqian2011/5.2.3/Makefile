@@ -1,4 +1,4 @@
-obj-m := bus_basic.o bus.o
+obj-m := bus_basic.o bus.o device.o driver.o
 KDIR := ${kernel}
 all:
 	echo $(shell pwd)
